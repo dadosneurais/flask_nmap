@@ -1,0 +1,17 @@
+{% extends 'nmap_base.html' %}
+
+{% block content %}
+<h2>Answer:</h2>
+<div>
+    {% if result.error %}
+    <h3>{{ result.error }}</h3>
+    {% else %}
+    <h3>IP: {{ result.ip }}</h3>
+    <ul>
+        {% for port in result.ports %}
+        <li>Porta aberta: {{ port }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}

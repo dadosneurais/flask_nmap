@@ -1,0 +1,13 @@
+{% extends 'nmap_base.html' %}
+
+{% block content %}
+<h2>Search:</h2>
+<h3>Após a pesquisa, aguarde um momento...</h3>
+<div>
+    <form method="POST" action="/nmap_answer">
+        <label for="ip">Enter IP:</label>
+        <input type="text" name="ip">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
